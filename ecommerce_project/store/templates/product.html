@@ -5,21 +5,30 @@ Product
 {% endblock%}
 
 {% block content%}
-<div class="contianter py-5">
+<div class="container py-5">
     <div class="row mt-5">
         <div class="col-10 mx-auto col-md-6 my-3">
-            <img src="{% static 'img/product-2.png' %}" alt="">
+            <div class="product-img-container">
+                <img src="{{product.image.url}}" alt="" class="product-img">
+            </div>
         </div>
         <div class="col-10 mx-auto col-md-6 my-3">
             <div>
-                <h1 class="product_title">HTC One</h1>
+                <h1 class="product_title">{{product.name}}</h1>
                 <h5 class="text-info font-italic mb-3">
-                            <span class="mr-1">EUR</span> 300
+                            <span class="mr-1">EUR</span>{{product.price}}
                 </h5>
-                <p class="product_description">Prouct Description</p>
-                <p class="text-justify product_text">Dummy Text for product
-                description</p>
+                <p class="product_description">Product Description</p>
+                <p class="text-justify product_text">{{product.description}}</p>
+                {% if product.stock <= 0 %}
                 <p class="text-justify product_text"><b>Out of stock</b></p>
+                {% else %}
+                <a href="{% url 'add_cart' product.id %}">
+                    <button type="button" name="button" class="btn btn-secondary">
+                        Add to Cart
+                    </button>
+                </a>
+                {% endif %}
             </div>
         </div>
     </div>

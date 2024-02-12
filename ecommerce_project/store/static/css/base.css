@@ -20,3 +20,19 @@ body {
     text-transform: uppercase;
     letter-spacing: .2em;
 }
+
+/*codul meu*/
+.product-img-container {
+    position: relative;
+    left: -200px;
+    top: -50px;
+    width: 100%; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    margin: 10vh auto; /* Center the image vertically */
+    overflow: hidden; /* Clip the image to the container size */
+}
+.product-img {
+    width: 100%; /* Make the image fill the container width */
+    height: 100%; /* Make the image fill the container height */
+    object-fit: cover; /* Maintain the aspect ratio and cover the container */
+}
