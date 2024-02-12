@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'store',
+    'stripe',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -124,7 +126,10 @@ STATICFILES = [os.path.join(BASE_DIR, 'static')]
 STATICFILES_DIRS = [BASE_DIR / "static"]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51Oj1qNLBYNiJNBVpasVmpdLkiByChA9nAqVJlPWmWA3WUuKdKCdlVJ63KWsHRzA260BqXnSR6c8CgemcgPxVDtqK003wuovwEy'
+STRIPE_SECRET_KEY = 'sk_test_51Oj1qNLBYNiJNBVpo8sXjaXj1IivGztCWokYa2slRFYC5oeTJfIgyvxaxgvODXW5IHPvplfcI1idHcg5DePp1sQv00t9HzhrSJ'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

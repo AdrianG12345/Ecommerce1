@@ -10,9 +10,8 @@ Home
             <img style="width: 100%" src="{% static 'img/image.jpg' %}" alt="">
         </div>
     </div>
-
     <div class="py-4">
-        <div class="containter">
+        <div class="container">
             <div class="row">
                 <div class="col-10 mx-auto my-2 text-center">
 <h1 class="text-capitalize font-weight-bold">
@@ -21,17 +20,16 @@ Home
                 </div>
             </div>
         </div>
-
     </div>
 
-    <div class="containter">
+    <div class="container">
         <div class="row">
             {% for product in products %}
             <div class="col-9 mx-auto col-md-6 col-lg-3">
                 <div class="card mb-4" style="border-color: transparent;">
                     <div class="p-4">
-                        <a href="{{product.get_url}}">
-                            <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}">
+                        <a href="{{ product.get_url }}">
+                            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
                         </a>
 
                     </div>

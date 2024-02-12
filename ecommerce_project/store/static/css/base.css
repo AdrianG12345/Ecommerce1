@@ -36,3 +36,12 @@ body {
     height: 100%; /* Make the image fill the container height */
     object-fit: cover; /* Maintain the aspect ratio and cover the container */
 }
+
+.errorlist li {
+    color: red;
+    font-weight: bold;
+}
+
+.custom_div {
+    margin-bottom: 20px !important;
+}
